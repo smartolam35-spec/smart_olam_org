@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8080}
+  port: ${PORT}
   servlet:
     context-path: /
 
@@ -20,7 +20,7 @@ spring:
       max-request-size: 10MB
 
 image:
-  upload-dir: uploads/images
+  upload-dir: /tmp/uploads/images
 
 logging:
   level:
