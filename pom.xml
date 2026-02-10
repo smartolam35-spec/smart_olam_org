@@ -117,6 +117,7 @@
     </dependencies>
 
     <build>
+       <finalName>smart_olam</finalName>
         <plugins>
 
             <!-- Maven Compiler + Annotation Processors -->
