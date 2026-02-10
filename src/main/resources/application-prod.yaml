@@ -6,4 +6,6 @@ spring:
     name: smart_olam_org
     
 
-  sql
+  sql:
+    init:
+      mode: always
