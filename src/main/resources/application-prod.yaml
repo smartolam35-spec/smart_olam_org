@@ -11,6 +11,14 @@ spring:
     password: ${JDBC_DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://ballast.proxy.rlwy.net:39024/railway
+#     username: postgres
+#     password: CAUYGiaQJDiLWheUKrTxsJMYKfXvBfqM
+#     driver-class-name: org.postgresql.Driver
+
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,7 +29,7 @@ spring:
       max-request-size: 10MB
 
 image:
-  upload-dir: /tmp/uploads/images
+  upload-dir: /uploads/images
 
 logging:
   level:
