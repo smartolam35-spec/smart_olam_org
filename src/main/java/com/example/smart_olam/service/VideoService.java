@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.smart_olam.dto.video.VideoCreate;
 import com.example.smart_olam.dto.video.VideoResponse;
 import com.example.smart_olam.dto.video.VideoUpdate;
-import com.example.smart_olam.mapper.VideoMapper;
+import com.example.smart_olam.mapper.VideMapper;
 import com.example.smart_olam.model.Lesson;
 import com.example.smart_olam.model.Video;
 import com.example.smart_olam.repository.LessonRepository;
@@ -18,10 +18,10 @@ import com.example.smart_olam.repository.VideoRepository;
 public class VideoService extends AbstractService<VideoRepository> implements GenericService<
  VideoResponse,VideoUpdate,VideoCreate,Long>{
 
-    private final VideoMapper mapper;
+    private final VideMapper mapper;
     private final LessonRepository lessonRepository;
 
-    protected VideoService(VideoRepository repository,VideoMapper mapper,LessonRepository lessonRepository) {
+    protected VideoService(VideoRepository repository,VideMapper mapper,LessonRepository lessonRepository) {
         super(repository);
         this.mapper = mapper;
         this.lessonRepository = lessonRepository;

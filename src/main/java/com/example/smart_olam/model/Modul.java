@@ -1,6 +1,5 @@
 package com.example.smart_olam.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.example.smart_olam.enums.Status;

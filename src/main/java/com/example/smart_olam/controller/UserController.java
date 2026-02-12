@@ -54,7 +54,7 @@ public class UserController {
         }
 
         String newAccessToken = jwtService.generateToken(user);
-        String newRefreshToken = jwtService.generateRefreshToken(user); // ixtiyoriy, agar refresh tokenni yangilamoqchi bo‘lsangiz
+        String newRefreshToken = jwtService.generateRefreshToken(user); 
 
         return new AuthResponse(newAccessToken, newRefreshToken);
     }
@@ -74,7 +74,7 @@ public class UserController {
         }
 
         String accessToken = jwtService.generateToken(user);
-        String refreshToken = jwtService.generateRefreshToken(user); // refresh token yaratish
+        String refreshToken = jwtService.generateRefreshToken(user); 
 
         return new LoginResponse(accessToken, refreshToken);
     }

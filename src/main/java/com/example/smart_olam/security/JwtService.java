@@ -16,10 +16,8 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-    // Xavfsiz kalitni Keys.secretKeyFor yordamida yaratamiz
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    // Token yaratish
     public String generateToken(User user) {
         return Jwts.builder()
                 .setSubject(user.getUsername())
@@ -39,17 +37,14 @@ public class JwtService {
                 .compact();
     }
 
-    // Username olish
     public String extractUsername(String token) {
         return getClaims(token).getSubject();
     }
 
-    // Role olish
     public String extractRole(String token) {
         return getClaims(token).get("role", String.class);
     }
 
-    // Claims olish
     private Claims getClaims(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(key)

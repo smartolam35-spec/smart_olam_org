@@ -35,7 +35,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         String authHeader = request.getHeader("Authorization");
 
-        // Agar header bo'lmasa yoki Bearer bilan boshlanmasa, keyingi filterga o'tish
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);
             return;
@@ -47,23 +46,18 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         try {
             username = jwtService.extractUsername(jwt);
         } catch (Exception e) {
-            // Token noto'g'ri yoki muddati o'tgan bo'lsa
             filterChain.doFilter(request, response);
             return;
         }
 
-        // Agar authentication hali mavjud bo'lmasa
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 
-            // Token validatsiyasi
             if (jwtService.isTokenValid(jwt, userDetails)) {
 
-                // Role olish
                 String role = jwtService.extractRole(jwt);
 
-                // Default role va ROLE_ prefiksi
                 if (role == null || role.isBlank()) {
                     role = "USER";
                 }

@@ -12,7 +12,7 @@ import com.example.smart_olam.dto.lesson.LessonResponse;
 import com.example.smart_olam.dto.lesson.LessonUpdate;
 import com.example.smart_olam.model.Lesson;
 
-@Mapper(componentModel = "spring",uses = VideoMapper.class,nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+@Mapper(componentModel = "spring",uses = VideMapper.class,nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface LessonMapper extends BaseMapper<
     Lesson,
     LessonResponse,

@@ -9,7 +9,6 @@ import com.example.smart_olam.dto.lesson.LessonCreate;
 import com.example.smart_olam.dto.lesson.LessonPubResponse;
 import com.example.smart_olam.dto.lesson.LessonResponse;
 import com.example.smart_olam.dto.lesson.LessonUpdate;
-import com.example.smart_olam.dto.modul.ModuleRespone;
 import com.example.smart_olam.mapper.LessonMapper;
 import com.example.smart_olam.model.Lesson;
 import com.example.smart_olam.model.Modul;
