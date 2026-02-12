@@ -16,7 +16,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public User createUser(String username, String password, Role role) {
+    public User createUser(String username, String password) {
 
         if (userRepository.findByUsername(username).isPresent()) {
             throw new RuntimeException("User already exists");
@@ -25,8 +25,6 @@ public class UserService {
         User user = new User();
         user.setUsername(username);
         user.setPassword(passwordEncoder.encode(password));
-        user.setRole(role);
-
         return userRepository.save(user);
     }
 

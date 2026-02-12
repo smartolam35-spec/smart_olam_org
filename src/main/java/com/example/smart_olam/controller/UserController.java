@@ -32,8 +32,7 @@ public class UserController {
     public AuthResponse register(@RequestBody RegisterRequest request) {
         User user = userService.createUser(
                 request.getUsername(),
-                request.getPassword(),
-                request.getRole()
+                request.getPassword()
         );
 
         String accessToken = jwtService.generateToken(user);

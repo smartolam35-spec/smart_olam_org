@@ -12,7 +12,7 @@ import com.example.smart_olam.dto.video.VideoUpdate;
 import com.example.smart_olam.model.Video;
 
 @Mapper(componentModel = "spring",nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-public interface VideMapper extends BaseMapper<
+public interface VieoM extends BaseMapper<
     Video,
     VideoResponse,
     VideoCreate,
