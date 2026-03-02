@@ -14,9 +14,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>smart_olam</artifactId>
+    <artifactId>smart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>smart_olam</name>
+    <name>smart</name>
     <description>education project</description>
 
     <properties>
